@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+
+</head>
+<body>
+  <div style="text-align: center; margin-top: 20px;">
+    <span class="notification">
+      Item Edited successfully.
+    </span>
+  </div> 
+ 
+   <div class="container">
+      <header>To Do List</header>
+      <div class="inputfild">
+      
+          <input type="text" id="addindex" placeholder="Add your new Todo.">
+          <input type="hidden" id="saveindex">
+        
+          
+          <button id="addTask"><i class="fas fa-plus"></i></button>
+          <button id="saveTask"style="display: none;"><i class="fas fa-download"></i></button>
+      </div>
+
+      <div class="Complete">NOT COMPLETED</div>
+      <ul class="todoList">
+      <!-- data comes from localstorage -->
+    <!-- <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li>
+    <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li>
+    <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li>
+    <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li>
+    <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li>
+    <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li>
+    <li>Buy a new gaming Laptop <button><i class="far fa-edit"></i></button> <a><i class="far fa-check-square"></i></a> <span><i class="fas fa-trash"></i></span></li> -->
+      </ul>
+
+      <div class="footer">
+          <span>You have <span class="pendingNum">0</span> pending task.</span>
+          <button>Clear All</button>
+      </div>
+      
+      <div class="Complete">COMPLETED</div>
+      
+      <ul class="complete">
+          <!-- <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li>
+          <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li>
+          <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li>
+          <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li>
+          <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li>
+          <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li>
+          <li>Buy a new gaming Laptop<span><i class="fas fa-trash"></i></span></li> -->
+      </ul>
+
+
+
+      <div class="footer1">
+        <span>You have done <span class="completedNum">0</span> task.</span> 
+        <button class="completebtn">Clear All</button>
+      </div>
+   </div>
+  
+  <script src="Todo-list.js"></script>
+</body>
+</html>

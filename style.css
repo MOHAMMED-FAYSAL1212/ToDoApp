@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(4, 124, 194);
+}
+
+.notification{
+ background-color: #14db6e;
+ padding: 10px 30px;
+ border-radius: 8px;
+ color: #fff;
+ /* display: none; */
+}
+
+header{
+    text-align: center;
+}
+
+.container{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.container header{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.inputfild{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 45px;
+width: 100%;
+margin: 15px 0;
+}
+
+.inputfild input{
+    width: 85%;
+    height: 90%;
+    border: 2px solid rgba(78, 78, 78, 0.8);
+    font-size: 15px;
+    border-radius: 25px;
+    padding-left: 15px;
+    outline: none;
+    transition: .3s;
+}
+.inputfild input:hover{
+    background: #ff0062;
+    color: white;
+}
+.inputfild input:hover::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+
+.inputfild #addTask{
+    width: 45px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: #ff0062;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: .1s;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.inputfild #addTask i{
+    text-align: center;
+    line-height: 45px;
+}
+.inputfild #saveTask{
+    width: 45px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: #ff0062;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.inputfild #addTask.active{
+    /* footer button active property ta na dile comment out kora css gula kaj korto */
+    /* background: white;
+    border: 2px solid #111;
+    color: #111;
+    padding: 4px 8px; */
+
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+
+
+
+
+/* kivabe scrollber anbo */
+ul{
+    max-height: 220px;
+    overflow-y: auto;
+    counter-reset: my-counter;
+
+}
+ul li{
+    list-style: none;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    background: #dddddd;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 10px;
+    cursor: default;
+    overflow: hidden;
+    counter-increment:my-counter;
+}
+ul li::before{
+    content: counter(my-counter);
+    background: #231381;
+    width: 1.6rem;
+    height: 1.6rem; 
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #fff;
+    margin-top: 5px;
+    margin-right: 0.5rem;
+}
+
+
+
+
+
+
+.todoList span{
+    height: 100%;
+    border: none;
+    position: absolute;
+    right: -130px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background-color: #ff1900;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition:  .3s ;
+}
+
+
+.todoList a{
+    height: 100%;
+    text-decoration: none;
+    position: absolute;
+    right:-90px;
+    color: #fff;
+    width: 45px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #049947;
+   
+    cursor: pointer;
+    transition:  .3s ;
+}
+
+
+.todoList button{
+    height: 100%;
+    border: none;
+    outline: none;
+    position: absolute;
+    right:-45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background-color: #04bff8;
+    cursor: pointer;
+    transition:  .3s ;
+    font-size: 18px;
+}
+
+
+
+
+
+.todoList li:hover span{
+    right: 0px;
+}
+
+.todoList li:hover a{
+    right: 45px;
+}
+
+.todoList li:hover button{
+    right: 90px;
+}
+
+
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer button{
+    border: none;
+    outline: none;
+    background:#ff0062;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px 10px;
+    opacity: 0.6;
+    pointer-events: none;
+    
+}
+.footer button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+.footer button:active{
+    /* footer button active property ta na dile comment out kora css gula kaj korto */
+    /* background: white;
+    border: 2px solid #111;
+    color: #111;
+    padding: 4px 8px; */
+
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.footer1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer1 .completebtn{
+    border: none;
+    outline: none;
+    background:#ff0062;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px 10px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.footer1 button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.footer1 .completebtn:active{
+    /* background: white;
+    border: 2px solid #111;
+    color: #111;
+    padding: 4px 8px; */
+    
+        opacity: 1;
+        pointer-events: auto;
+}
+
+
+
+
+
+/* Complete task */
+
+.Complete{
+    text-align: left;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid #ff0062;
+    background: #ff0062;
+    padding-left:10px;
+    color: white;
+    border-radius: 8px;
+}
+
+.complete li{
+  background: #00ff62;
+}
+
+.complete span{
+    position: absolute;
+    right: -130px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background-color: #ff1900;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition:  .3s ;
+}
+
+.complete li:hover span{
+    right: 0px;
+}
+
+.complete{
+    max-height: 220px;
+    overflow-y: auto;
+
+}
